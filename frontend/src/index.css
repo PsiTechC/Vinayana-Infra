@@ -235,6 +235,14 @@ ul {
   .section-head { margin-bottom: 40px; }
 }
 
+@media (max-width: 480px) {
+  .container { padding: 0 18px; }
+  .section { padding: 54px 0; }
+  .section-head { margin-bottom: 32px; }
+  .section-lead { font-size: 1rem; }
+  .btn { padding: 13px 22px; font-size: 0.9rem; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }

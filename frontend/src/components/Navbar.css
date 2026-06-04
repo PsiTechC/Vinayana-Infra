@@ -153,3 +153,18 @@
   .navbar__burger { display: flex; }
   .navbar__mobile { display: flex; }
 }
+
+/* Phones: shrink the brand so the logo + wordmark never crowd the burger */
+@media (max-width: 480px) {
+  .navbar__inner { height: 68px; }
+  .navbar--scrolled .navbar__inner { height: 60px; }
+  .navbar__mark { height: 40px; }
+  .navbar--scrolled .navbar__mark { height: 38px; }
+  .navbar__brand { gap: 10px; }
+  .navbar__wordmark { font-size: 1.16rem; }
+  .navbar__wordmark em { font-size: 0.52rem; letter-spacing: 0.26em; margin-top: 4px; }
+}
+
+@media (max-width: 360px) {
+  .navbar__wordmark em { display: none; } /* drop the sub-line on the tiniest screens */
+}

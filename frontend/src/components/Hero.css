@@ -154,3 +154,12 @@
 @media (max-width: 768px) {
   .hero__scroll { display: none; }
 }
+
+@media (max-width: 480px) {
+  .hero { padding: 100px 0 60px; min-height: 90vh; }
+  .hero__eyebrow { margin-bottom: 18px; padding: 8px 14px; font-size: 0.72rem; }
+  .hero__sub { margin-bottom: 30px; }
+  /* Stack the two CTAs full-width for comfortable tapping */
+  .hero__actions { width: 100%; }
+  .hero__actions .btn { flex: 1 1 100%; }
+}

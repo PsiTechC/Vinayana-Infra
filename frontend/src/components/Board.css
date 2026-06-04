@@ -83,6 +83,14 @@
 @media (max-width: 600px) {
   .board__marquee .director-card { flex-basis: 260px; width: 260px; }
   .board__arrow { width: 42px; height: 42px; }
+  .board__carousel { padding: 0 10px; gap: 4px; }
+  .board__marquee { padding: 40px 0 32px; }
+}
+
+@media (max-width: 480px) {
+  /* Swipe handles scrolling on phones — drop the arrows to reclaim width */
+  .board__arrow { display: none; }
+  .board__marquee .director-card { flex-basis: 244px; width: 244px; }
 }
 
 .board__grid--mentors {
