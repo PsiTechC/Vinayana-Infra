@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://localhost:5173/# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="./Vinayana Infra Projects _ Building Landmarks. Creating Futures._files/client"></script>
+
+    
+    <link rel="icon" type="image/png" href="http://localhost:5173/assets/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO meta -->
+    <title>Vinayana Infra Projects | Building Landmarks. Creating Futures.</title>
+    <meta name="description" content="Vinayana Infra Projects delivers modern real estate and infrastructure solutions with quality, trust, and innovation. Residential, commercial, and land development experts.">
+    <meta name="keywords" content="real estate, infrastructure, construction, residential projects, commercial projects, land development, Vinayana Infra">
+    <meta name="author" content="Vinayana Infra Projects">
+    <meta name="theme-color" content="#0a2540">
+
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vinayana Infra Projects | Building Landmarks. Creating Futures.">
+    <meta property="og:description" content="Modern real estate and infrastructure solutions with quality, trust, and innovation.">
+    <meta property="og:image" content="/assets/logo.png">
+
+    <!-- Fonts: Playfair Display (elegant headings) + Inter (clean body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Vinayana Infra Projects _ Building Landmarks. Creating Futures._files/css2" rel="stylesheet">
+  <style type="text/css" data-vite-dev-id="/Users/sanketkapoor/Akanksha/vianayana Infra/frontend/src/components/Intro.css">.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  /* crafted reveal edge as the curtain lifts */
+  box-shadow: 0 40px 80px rgba(10, 37, 64, 0.18);
+}
+
+.intro__glow {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  width: min(640px, 80vw);
+  height: min(640px, 80vw);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(201, 163, 91, 0.18) 0%,
+    rgba(201, 163, 91, 0.06) 35%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.intro__center {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.intro__logo {
+  width: min(420px, 78vw);
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.intro__line {
+  display: block;
+  height: 2px;
+  margin-top: 6px;
+  background: linear-gradient(90deg, transparent, var(--gold) 20%, var(--gold) 80%, transparent);
+  border-radius: 2px;
+}
+
+.intro__tagline {
+  margin-top: 18px;
+  font-family: var(--font-body);
+  font-size: clamp(0.78rem, 2.4vw, 0.95rem);
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--grey-500);
+}
+
+.intro__skip {
+  position: absolute;
+  bottom: 34px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--grey-300);
+}
+</style><style type="text/css" data-vite-dev-id="/Users/sanketkapoor/Akanksha/vianayana Infra/frontend/src/components/Navbar.css">.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background 0.45s var(--ease), box-shadow 0.45s var(--ease),
+    backdrop-filter 0.45s var(--ease);
+  background: transparent;
+}
+
+.navbar--scrolled {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: saturate(180%) blur(14px);
+  box-shadow: 0 1px 0 var(--border), var(--shadow-sm);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 84px;
+}
+
+.navbar--scrolled .navbar__inner { height: 72px; }
+.navbar__inner { transition: height 0.45s var(--ease); }
+
+/* Brand */
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.navbar__mark {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  transition: height 0.45s var(--ease);
+}
+
+.navbar--scrolled .navbar__mark { height: 44px; }
+
+.navbar__wordmark {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+  transition: color 0.45s var(--ease);
+}
+
+.navbar__wordmark em {
+  display: block;
+  font-style: normal;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.62rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 5px;
+}
+
+/* Over the dark hero, lift the wordmark to white for contrast */
+.navbar:not(.navbar--scrolled) .navbar__wordmark { color: var(--white); }
+
+/* Hero (transparent) state: lighten links for contrast over dark hero */
+.navbar:not(.navbar--scrolled) .navbar__link { color: rgba(255, 255, 255, 0.88); }
+
+/* Links */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.navbar__link {
+  position: relative;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--grey-700);
+  transition: color 0.3s var(--ease);
+}
+
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.35s var(--ease);
+}
+
+.navbar__link:hover { color: var(--navy); }
+.navbar:not(.navbar--scrolled) .navbar__link:hover { color: var(--white); }
+.navbar__link:hover::after { width: 100%; }
+
+.navbar__cta { padding: 11px 24px; font-size: 0.88rem; }
+
+/* Burger */
+.navbar__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 30px;
+  padding: 4px;
+}
+
+.navbar__burger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: transform 0.35s var(--ease), opacity 0.25s var(--ease), background 0.3s;
+}
+
+.navbar:not(.navbar--scrolled) .navbar__burger span { background: var(--white); }
+
+.navbar__burger.is-open span { background: var(--navy); }
+.navbar__burger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.navbar__burger.is-open span:nth-child(2) { opacity: 0; }
+.navbar__burger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile menu */
+.navbar__mobile {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px 24px 28px;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-md);
+}
+
+.navbar__mobile-link {
+  padding: 13px 4px;
+  font-size: 1.02rem;
+  font-weight: 500;
+  color: var(--navy);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar__mobile .btn { margin-top: 14px; }
+
+@media (max-width: 940px) {
+  .navbar__links,
+  .navbar__cta { display: none; }
+  .navbar__burger { display: flex; }
+  .navbar__mobile { display: flex; }
+}
+</style><style type="text/css" data-vite-dev-id="/Users/sanketkapoor/Akanksha/vianayana Infra/frontend/src/components/Hero.css">.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: var(--white);
+  padding: 120px 0 80px;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: -8% 0;
+  will-change: transform;
+  z-index: 0;
+  background: var(--navy-deep);
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.4s ease-in-out;
+}
+
+.hero__video.is-active {
+  opacity: 1;
+}
+
+/* Carousel indicator dots */
+.hero__dots {
+  position: absolute;
+  right: 38px;
+  bottom: 38px;
+  z-index: 3;
+  display: flex;
+  gap: 12px;
+}
+
+.hero__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.35s var(--ease), transform 0.35s var(--ease),
+    border-color 0.35s var(--ease);
+}
+
+.hero__dot:hover { border-color: var(--gold); }
+
+.hero__dot.is-active {
+  background: var(--gold);
+  border-color: var(--gold);
+  transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+  .hero__dots { right: 20px; bottom: 22px; }
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(6, 26, 48, 0.72) 0%, rgba(6, 26, 48, 0.78) 40%, rgba(6, 26, 48, 0.92) 100%),
+    radial-gradient(120% 80% at 20% 10%, rgba(10, 37, 64, 0.3), transparent 60%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 3;
+  max-width: 820px;
+}
+
+.hero__eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  margin-bottom: 22px;
+  padding: 9px 18px;
+  border: 1px solid rgba(201, 163, 91, 0.4);
+  border-radius: 50px;
+  background: rgba(201, 163, 91, 0.08);
+}
+
+.hero__title {
+  font-size: clamp(2.6rem, 6.4vw, 5.2rem);
+  color: var(--white);
+  line-height: 1.05;
+  margin-bottom: 26px;
+  letter-spacing: -0.02em;
+}
+
+.hero__title-accent {
+  background: linear-gradient(120deg, var(--gold-soft), var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero__sub {
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  color: rgba(255, 255, 255, 0.84);
+  max-width: 600px;
+  margin-bottom: 38px;
+  font-weight: 300;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Scroll cue */
+.hero__scroll {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 26px;
+  height: 42px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 14px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__scroll span {
+  width: 4px;
+  height: 8px;
+  background: var(--gold);
+  border-radius: 4px;
+  margin-top: 8px;
+  animation: scrollPulse 1.6s var(--ease) infinite;
+}
+
+@keyframes scrollPulse {
+  0% { transform: translateY(0); opacity: 1; }
+  70% { transform: translateY(14px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .hero__scroll { display: none; }
+}
+</style><style type="text/css" data-vite-dev-id="/Users/sanketkapoor/Akanksha/vianayana Infra/frontend/src/components/About.css">.about__grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* Media collage */
+.about__media {
+  position: relative;
+  min-height: 520px;
+}
+
+.about__media-main,
+.about__media-sub {
+  position: absolute;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.about__media-main {
+  top: 0;
+  left: 0;
+  width: 74%;
+  aspect-ratio: 3 / 4;
+}
+
+.about__media-sub {
+  bottom: 0;
+  right: 0;
+  width: 52%;
+  aspect-ratio: 4 / 3;
+  border: 6px solid var(--white);
+}
+
+.about__media-main img,
+.about__media-sub img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease);
+}
+
+.about__media:hover .about__media-main img { transform: scale(1.06); }
+
+.about__badge {
+  position: absolute;
+  top: 12%;
+  right: 2%;
+  background: var(--navy);
+  color: var(--white);
+  padding: 18px 22px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  z-index: 2;
+}
+
+.about__badge-num {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.about__badge-label {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Body */
+.about__text {
+  color: var(--grey-700);
+  margin-top: 18px;
+}
+
+.about__pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px 30px;
+  margin-top: 40px;
+}
+
+.about__pillar {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.about__pillar-dot {
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 5px rgba(201, 163, 91, 0.15);
+}
+
+.about__pillar h4 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.about__pillar p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+@media (max-width: 960px) {
+  .about__grid { grid-template-columns: 1fr; gap: 56px; }
+  .about__media { min-height: 440px; max-width: 520px; }
+}
+
+@media (max-width: 560px) {
+  .about__pillars { grid-template-columns: 1fr; gap: 20px; }
+  .about__media { min-height: 380px; }
+}
+</style><style type="text/css" data-vite-dev-id="/Users/sanketkapoor/Akanksha/vianayana Infra/frontend/src/components/Services.css">.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.service-card {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 38px 32px 34px;
+  overflow: hidden;
+  transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease),
+    border-color 0.45s var(--ease);
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--gold), var(--gold-soft));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.service-card:hover::before { transform: scaleX(1); }
+
+.service-card__icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--grey-100);
+  color: var(--navy);
+  margin-bottom: 24px;
+  transition: background 0.45s var(--ease), color 0.45s var(--ease),
+    transform 0.45s var(--ease);
+}
+
+.service-card__icon svg { width: 30px; height: 30px; }
+
+.service-card:hover .service-card__icon {
+  background: var(--navy);
+  color: var(--gold);
+  transform: rotate(-6deg) scale(1.05);
+}
+
+.service-card h3 {
+  font-size: 1.28rem;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.service-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--navy);
+  opacity: 0.7;
+  transition: gap 0.35s var(--ease), opacity 0.35s var(--ease), color 0.35s;
+}
+
+.service-card:hover .service-card__link {
+  opacity: 1;
+  gap: 12px;
+  color: var(--gold);
+}
+
+.service-card__index {
+  position: absolute;
+  right: 24px;
+  bottom: 14px;
+  font-family: var(--font-head);
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: var(--grey-100);
+  line-height: 1;
+  z-index: 0;
+  pointer-events: none;
+  transition: color 0.45s var(--ease);
+}
+
+.service-card:hover .service-card__index { color: rgba(201, 163, 91, 0.16); }
+
+@media (max-width: 960px) {
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .services__grid { grid-template-columns: 1fr; }
+}
+</style><style type="text/css" data-vite-dev-id="/Users/sanketkapoor/Akanksha/vianayana Infra/frontend/src/components/Projects.css">.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.project-card {
+  position: relative;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-card__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.project-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease);
+}
+
+.project-card:hover .project-card__media img { transform: scale(1.1); }
+
+.project-card__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, rgba(6, 26, 48, 0.55));
+  opacity: 0.85;
+}
+
+.project-card__status,
+.project-card__cat {
+  position: absolute;
+  z-index: 2;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 6px 13px;
+  border-radius: 50px;
+  backdrop-filter: blur(4px);
+}
+
+.project-card__status { top: 14px; left: 14px; color: var(--white); }
+.project-card__status.is-done { background: rgba(46, 160, 110, 0.92); }
+.project-card__status.is-active { background: rgba(201, 163, 91, 0.95); color: var(--navy-deep); }
+.project-card__status.is-soon { background: rgba(10, 37, 64, 0.85); color: var(--white); }
+
+.project-card__cat {
+  top: 14px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--navy);
+}
+
+.project-card__body {
+  position: relative;
+  z-index: 2;
+  padding: 22px 24px 26px;
+}
+
+.project-card__body h3 {
+  font-size: 1.22rem;
+  margin-bottom: 8px;
+  transition: color 0.35s var(--ease);
+}
+
+.project-card:hover .project-card__body h3 { color: var(--gold); }
+
+.project-card__loc {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.project-card__loc svg { color: var(--gold); flex-shrink: 0; }
+
+.project-card__view {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--white);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
+}
+
+.project-card:hover .project-card__view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* On hover, move the body text up a touch so the View link has room */
+@media (max-width: 960px) {
+  .projects__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .projects__grid { grid-template-columns: 1fr; }
+}
+</style><style type="text/css" data-vite-dev-id="/Users/sanketkapoor/Akanksha/vianayana Infra/frontend/src/components/Board.css">.board__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 26px;
+}
+
+.board__grid--team {
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.board__grid--team .director-card {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 30px 20px 28px;
+}
+
+/* below desktop, allow the team to wrap onto multiple rows */
+@media (max-width: 1080px) {
+  .board__grid--team { flex-wrap: wrap; }
+  .board__grid--team .director-card { flex: 1 1 220px; max-width: 260px; }
+}
+
+.board__grid--mentors {
+  gap: 30px;
+}
+
+.board__grid--mentors .director-card {
+  flex: 0 1 360px;
+}
+
+/* Mentors block sits on the off-white base; tint it subtly */
+.board--mentors {
+  background: linear-gradient(180deg, var(--off-white), var(--white));
+}
+
+.director-card {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 26px 30px;
+  text-align: center;
+  transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease),
+    border-color 0.45s var(--ease);
+}
+
+.director-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.director-card__photo {
+  width: 118px;
+  height: 118px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--navy), var(--navy-soft));
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 0 4px var(--white), 0 0 0 6px rgba(201, 163, 91, 0.4);
+  transition: box-shadow 0.45s var(--ease);
+}
+
+.director-card:hover .director-card__photo {
+  box-shadow: 0 0 0 4px var(--white), 0 0 0 7px var(--gold);
+}
+
+.director-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 18%;
+}
+
+.director-card__initials {
+  font-family: var(--font-head);
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.director-card h3 {
+  font-size: 1.22rem;
+  margin-bottom: 5px;
+}
+
+.director-card__role {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.director-card p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.director-card__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.director-card__profile-btn {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--navy);
+  padding: 10px 18px;
+  border-radius: 50px;
+  border: 1.5px solid var(--border);
+  background: var(--white);
+  transition: border-color 0.35s var(--ease), background 0.35s var(--ease),
+    color 0.35s var(--ease), transform 0.35s var(--ease);
+}
+
+.director-card__profile-btn:hover {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+  transform: translateY(-2px);
+}
+
+.director-card__social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--grey-100);
+  color: var(--navy);
+  transition: background 0.35s var(--ease), color 0.35s var(--ease),
+    transform 0.35s var(--ease);
+}
+
+.director-card__social:hover {
+  background: var(--navy);
+  color: var(--gold);
+  transform: translateY(-3px);
+}
+
+/* ---------- Profile modal ---------- */
+.director-modal__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(6, 26, 48, 0.55);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.director-modal {
+  position: relative;
+  width: 100%;
+  max-width: 760px;
+  max-height: 88vh;
+  overflow-y: auto;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 40px;
+}
+
+.director-modal__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--grey-100);
+  color: var(--navy);
+  transition: background 0.3s var(--ease), color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.director-modal__close:hover {
+  background: var(--navy);
+  color: var(--white);
+  transform: rotate(90deg);
+}
+
+.director-modal__head {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding-bottom: 26px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid var(--border);
+}
+
+.director-modal__photo {
+  width: 130px;
+  height: 130px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--navy), var(--navy-soft));
+  box-shadow: 0 0 0 4px var(--white), 0 0 0 6px rgba(201, 163, 91, 0.5);
+}
+
+.director-modal__photo .director-card__initials { font-size: 2.4rem; }
+
+.director-modal__id h3 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+/* keep role on its own line inside the modal header */
+.director-modal__id .director-card__role {
+  display: block;
+  margin-bottom: 0;
+}
+
+.director-modal__linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 9px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 50px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--navy);
+  transition: color 0.3s var(--ease), background 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+}
+
+.director-modal__linkedin:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+}
+
+
+.director-modal__body p {
+  color: var(--grey-700);
+  font-size: 0.96rem;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.director-modal__subtitle {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 26px 0 16px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+}
+
+.director-modal__domains {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.director-modal__domains li {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--navy);
+  background: var(--grey-100);
+  padding: 7px 14px;
+  border-radius: 50px;
+  border: 1px solid var(--border);
+  transition: background 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.director-modal__domains li:hover {
+  background: var(--navy);
+  color: var(--gold-soft);
+}
+
+@media (max-width: 620px) {
+  .director-modal { padding: 30px 22px; }
+  .director-modal__head { flex-direction: column; text-align: center; gap: 16px; }
+  .director-modal__domains { justify-content: center; }
+}
+
+@media (max-width: 420px) {
+  .board__grid--team .director-card,
+  .board__grid--mentors .director-card { flex-basis: 100%; max-width: 320px; }
+}
+</style><style type="text/css" data-vite-dev-id="/Users/sanketkapoor/Akanksha/vianayana Infra/frontend/src/components/WhyChooseUs.css">.why {
+  position: relative;
+  color: var(--white);
+  overflow: hidden;
+}
+
+.why__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(180deg, rgba(6, 26, 48, 0.94), rgba(6, 26, 48, 0.97)),
+    url('https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1800&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.why .container { position: relative; z-index: 1; }
+
+.why__title { color: var(--white); }
+.why__lead { color: rgba(255, 255, 255, 0.7); }
+
+.why__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.why-card {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 28px 26px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  transition: transform 0.4s var(--ease), background 0.4s var(--ease),
+    border-color 0.4s var(--ease);
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(201, 163, 91, 0.5);
+}
+
+.why-card__icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(201, 163, 91, 0.15);
+  color: var(--gold);
+  transition: background 0.4s var(--ease), transform 0.4s var(--ease);
+}
+
+.why-card__icon svg { width: 27px; height: 27px; }
+
+.why-card:hover .why-card__icon {
+  background: var(--gold);
+  color: var(--navy-deep);
+  transform: scale(1.08);
+}
+
+.why-card h4 {
+  font-family: var(--font-body);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.why-card p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.66);
+  line-height: 1.55;
+}
+
+@media (max-width: 960px) {
+  .why__grid { grid-template-columns: repeat(2, 1fr); }
+  .why__bg { background-attachment: scroll; }
+}
+
+@media (max-width: 600px) {
+  .why__grid { grid-template-columns: 1fr; }
+}
+</style><style type="text/css" data-vite-dev-id="/Users/sanketkapoor/Akanksha/vianayana Infra/frontend/src/components/Contact.css">.contact__grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 36px;
+  align-items: stretch;
+}
+
+/* Info column */
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact__info-card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 20px 22px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease),
+    border-color 0.35s var(--ease);
+}
+
+.contact__info-card:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sm);
+  border-color: rgba(201, 163, 91, 0.5);
+}
+
+.contact__info-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--navy);
+  color: var(--gold);
+}
+
+.contact__info-icon svg { width: 24px; height: 24px; }
+
+.contact__info-card strong {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 3px;
+}
+
+.contact__info-card em {
+  font-style: normal;
+  color: var(--grey-700);
+  font-size: 0.96rem;
+  line-height: 1.4;
+}
+
+.contact__map {
+  flex: 1;
+  min-height: 220px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.contact__map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  border: 0;
+  filter: grayscale(0.2) contrast(1.05);
+}
+
+/* Form */
+.contact__form-wrap {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 38px;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact__form { display: flex; flex-direction: column; gap: 20px; }
+
+.contact__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.field { display: flex; flex-direction: column; }
+
+.field label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.field input,
+.field textarea {
+  font-family: var(--font-body);
+  font-size: 0.96rem;
+  color: var(--text);
+  padding: 13px 16px;
+  border: 1.5px solid var(--grey-300);
+  border-radius: var(--radius-sm);
+  background: var(--off-white);
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease),
+    background 0.3s var(--ease);
+  resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: var(--white);
+  box-shadow: 0 0 0 4px rgba(201, 163, 91, 0.14);
+}
+
+.field input::placeholder,
+.field textarea::placeholder { color: var(--grey-500); }
+
+.contact__submit {
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+.contact__note {
+  font-size: 0.92rem;
+  font-weight: 500;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+}
+
+.contact__note.is-success {
+  color: #1c7a52;
+  background: rgba(46, 160, 110, 0.12);
+}
+
+.contact__note.is-error {
+  color: #b23b3b;
+  background: rgba(178, 59, 59, 0.1);
+}
+
+@media (max-width: 900px) {
+  .contact__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px) {
+  .contact__row { grid-template-columns: 1fr; }
+  .contact__form-wrap { padding: 26px 22px; }
+}
+</style><style type="text/css" data-vite-dev-id="/Users/sanketkapoor/Akanksha/vianayana Infra/frontend/src/components/Footer.css">.footer {
+  background: var(--navy-deep);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+  gap: 48px;
+  padding: 80px 24px 56px;
+}
+
+.footer__logo {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer__logo img {
+  height: 78px;
+  width: auto;
+  opacity: 0.96;
+}
+
+.footer__brand p {
+  font-size: 0.94rem;
+  line-height: 1.7;
+  max-width: 340px;
+  margin-bottom: 24px;
+}
+
+.footer__socials { display: flex; gap: 12px; }
+
+.footer__socials a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.8);
+  transition: background 0.35s var(--ease), color 0.35s var(--ease),
+    transform 0.35s var(--ease);
+}
+
+.footer__socials a svg { width: 17px; height: 17px; }
+
+.footer__socials a:hover {
+  background: var(--gold);
+  color: var(--navy-deep);
+  transform: translateY(-3px);
+}
+
+.footer__col h4 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 22px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer__col h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 32px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.footer__col ul { display: flex; flex-direction: column; gap: 12px; }
+
+.footer__col a,
+.footer__contact li {
+  font-size: 0.93rem;
+  color: rgba(255, 255, 255, 0.66);
+  transition: color 0.3s var(--ease), padding-left 0.3s var(--ease);
+}
+
+.footer__col a:hover {
+  color: var(--gold);
+  padding-left: 5px;
+}
+
+.footer__contact li { line-height: 1.6; }
+
+.footer__bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  font-size: 0.86rem;
+}
+
+.footer__bar-links { display: flex; align-items: center; gap: 10px; }
+.footer__bar-links a:hover { color: var(--gold); }
+
+@media (max-width: 860px) {
+  .footer__grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+
+@media (max-width: 520px) {
+  .footer__grid { grid-template-columns: 1fr; padding: 56px 24px 40px; }
+  .footer__bar-inner { flex-direction: column; gap: 10px; text-align: center; }
+}
+</style><style type="text/css" data-vite-dev-id="/Users/sanketkapoor/Akanksha/vianayana Infra/frontend/src/index.css">/* =========================================================
+   Vinayana Infra Projects — Global Theme
+   Premium light real-estate aesthetic
+   Navy branding · gold + grey accents · elegant type
+   ========================================================= */
+
+:root {
+  /* Brand palette */
+  --navy: #0a2540;
+  --navy-deep: #061a30;
+  --navy-soft: #16395c;
+  --gold: #c9a35b;
+  --gold-soft: #e3c98c;
+  --grey-900: #1c2531;
+  --grey-700: #44505f;
+  --grey-500: #6b7888;
+  --grey-300: #c5ccd6;
+  --grey-100: #eef1f5;
+  --off-white: #f7f8fa;
+  --white: #ffffff;
+
+  /* Semantic */
+  --bg: var(--off-white);
+  --text: var(--grey-900);
+  --muted: var(--grey-500);
+  --accent: var(--gold);
+  --border: rgba(10, 37, 64, 0.08);
+
+  /* Type */
+  --font-head: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 18px rgba(10, 37, 64, 0.06);
+  --shadow-md: 0 14px 40px rgba(10, 37, 64, 0.10);
+  --shadow-lg: 0 28px 70px rgba(10, 37, 64, 0.16);
+
+  /* Layout */
+  --container: 1200px;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-head);
+  color: var(--navy);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---------- Layout helpers ---------- */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 110px 0;
+  position: relative;
+}
+
+.section-alt {
+  background: var(--white);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 1.5px;
+  background: var(--gold);
+  display: inline-block;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 18px;
+}
+
+.section-lead {
+  color: var(--muted);
+  font-size: 1.08rem;
+  max-width: 620px;
+}
+
+.section-head {
+  max-width: 680px;
+  margin-bottom: 60px;
+}
+
+.section-head.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-head.center .eyebrow::before {
+  display: none;
+}
+
+.text-gold { color: var(--gold); }
+.text-navy { color: var(--navy); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease),
+    background 0.35s var(--ease), color 0.35s var(--ease);
+  white-space: nowrap;
+}
+
+.btn svg { transition: transform 0.35s var(--ease); }
+.btn:hover svg { transform: translateX(4px); }
+
+.btn-primary {
+  background: var(--navy);
+  color: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background: var(--navy-deep);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  color: var(--navy-deep);
+}
+
+.btn-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(201, 163, 91, 0.35);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--navy);
+  border: 1.5px solid var(--border);
+}
+
+.btn-ghost:hover {
+  border-color: var(--navy);
+  transform: translateY(-3px);
+}
+
+.btn-outline-light {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: var(--white);
+  transform: translateY(-3px);
+}
+
+/* ---------- Utility: scroll reveal base ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .section { padding: 72px 0; }
+  .section-head { margin-bottom: 40px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style></head>
+  <body style="">
+    <div id="root"><div style="position: fixed; top: 0px; left: 0px; height: 3px; width: 41.8415%; background: linear-gradient(90deg, var(--gold), var(--gold-soft)); z-index: 1100; transition: width 0.1s linear;"></div><header class="navbar navbar--scrolled" style="transform: none;"><div class="container navbar__inner"><a href="http://localhost:5173/#home" class="navbar__brand"><img class="navbar__mark" src="./Vinayana Infra Projects _ Building Landmarks. Creating Futures._files/mark-navy.png" alt="Vinayana Infra Projects logo"><span class="navbar__wordmark">Vinayana<em>Infra Projects</em></span></a><nav class="navbar__links"><a href="http://localhost:5173/#home" class="navbar__link">Home</a><a href="http://localhost:5173/#about" class="navbar__link">About</a><a href="http://localhost:5173/#services" class="navbar__link">Services</a><a href="http://localhost:5173/#projects" class="navbar__link">Projects</a><a href="http://localhost:5173/#board" class="navbar__link">Team</a><a href="http://localhost:5173/#mentors" class="navbar__link">Mentors</a><a href="http://localhost:5173/#contact" class="navbar__link">Contact</a></nav><a href="http://localhost:5173/#contact" class="btn btn-gold navbar__cta">Get a Quote</a><button class="navbar__burger " aria-label="Toggle navigation"><span></span><span></span><span></span></button></div></header><main><section class="hero" id="home"><div class="hero__bg" style="transform: translateY(0px) scale(1.08);"><video class="hero__video " playsinline="" preload="auto" autoplay="" poster="/assets/hero-1.jpg"><source src="/assets/hero-1.mp4" type="video/mp4"></video><video class="hero__video " playsinline="" preload="auto" poster="/assets/hero-2.jpg"><source src="/assets/hero-2.mp4" type="video/mp4"></video><video class="hero__video is-active" playsinline="" preload="auto" poster="/assets/hero-3.jpg"><source src="/assets/hero-3.mp4" type="video/mp4"></video><video class="hero__video " playsinline="" preload="auto" poster="/assets/hero-4.jpg"><source src="/assets/hero-4.mp4" type="video/mp4"></video></div><div class="hero__overlay"></div><div class="hero__dots"><button class="hero__dot " aria-label="Show background clip 1"></button><button class="hero__dot " aria-label="Show background clip 2"></button><button class="hero__dot is-active" aria-label="Show background clip 3"></button><button class="hero__dot " aria-label="Show background clip 4"></button></div><div class="container hero__content"><span class="hero__eyebrow" style="opacity: 1; transform: none;">Real Estate · Infrastructure · Development</span><h1 class="hero__title" style="opacity: 1; transform: none;">Building Landmarks.<br><span class="hero__title-accent">Creating Futures.</span></h1><p class="hero__sub" style="opacity: 1; transform: none;">Vinayana Infra Projects delivers modern real estate and infrastructure solutions with quality, trust, and innovation.</p><div class="hero__actions" style="opacity: 1; transform: none;"><a href="http://localhost:5173/#projects" class="btn btn-gold">Explore Projects<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><a href="http://localhost:5173/#contact" class="btn btn-outline-light">Contact Us</a></div></div><a href="http://localhost:5173/#about" class="hero__scroll" aria-label="Scroll down"><span></span></a></section><section class="section about" id="about"><div class="container about__grid"><div class="about__media"><div class="about__media-main" style="opacity: 0; transform: translateY(28px);"><img src="./Vinayana Infra Projects _ Building Landmarks. Creating Futures._files/photo-1545324418-cc1a3fa10c00" alt="Modern architecture by Vinayana Infra" loading="lazy"></div><div class="about__media-sub" style="opacity: 0; transform: translateY(28px);"><img src="./Vinayana Infra Projects _ Building Landmarks. Creating Futures._files/photo-1503387762-592deb58ef4e" alt="Construction and infrastructure work" loading="lazy"></div><div class="about__badge" style="opacity: 0; transform: translateY(28px);"><span class="about__badge-num">18+</span><span class="about__badge-label">Years Building Trust</span></div></div><div class="about__body"><span class="eyebrow" style="opacity: 0; transform: translateY(28px);">About Vinayana Infra</span><h2 class="section-title" style="opacity: 0; transform: translateY(28px);">Engineering spaces that stand the test of time</h2><p class="section-lead" style="opacity: 0; transform: translateY(28px);">Vinayana Infra Projects is a real estate and infrastructure company built on a simple belief — that great spaces shape better lives. We focus on real estate development, infrastructure planning, and construction quality to create assets that deliver long-term value.</p><p class="about__text" style="opacity: 0; transform: translateY(28px);">From the first blueprint to the final handover, our integrated teams manage design, engineering, and execution under one roof. The result is dependable timelines, transparent processes, and landmarks that communities are proud to call their own.</p><div class="about__pillars"><div class="about__pillar" style="opacity: 0; transform: translateY(28px);"><span class="about__pillar-dot"></span><div><h4>Real Estate Development</h4><p>End-to-end development of premium residential and commercial spaces.</p></div></div><div class="about__pillar" style="opacity: 0; transform: translateY(28px);"><span class="about__pillar-dot"></span><div><h4>Infrastructure Planning</h4><p>Smart, future-ready infrastructure engineered for growing communities.</p></div></div><div class="about__pillar" style="opacity: 0; transform: translateY(28px);"><span class="about__pillar-dot"></span><div><h4>Construction Quality</h4><p>Uncompromising standards, certified materials, and rigorous QA.</p></div></div><div class="about__pillar" style="opacity: 0; transform: translateY(28px);"><span class="about__pillar-dot"></span><div><h4>Long-Term Value</h4><p>Assets designed to appreciate — built for generations, not just today.</p></div></div></div></div></div></section><section class="section section-alt services" id="services"><div class="container"><div class="section-head center"><span class="eyebrow" style="opacity: 0; transform: translateY(28px);">What We Do</span><h2 class="section-title" style="opacity: 0; transform: translateY(28px);">A full spectrum of building expertise</h2><p class="section-lead" style="margin: 0px auto; opacity: 0; transform: translateY(28px);">From concept to completion, our services cover every stage of real estate and infrastructure delivery.</p></div><div class="services__grid"><div class="service-card" style="opacity: 0; transform: translateY(28px);"><div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><h3>Real Estate Development</h3><p>Premium developments from land acquisition to handover, crafted for modern living and lasting value.</p><span class="service-card__link">Learn more<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="service-card__index">01</span></div><div class="service-card" style="opacity: 0; transform: translateY(28px);"><div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M2 20h20M4 20V8l4-3 4 3v12M14 20v-7l3-2 3 2v7M8 11h0M8 15h0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><h3>Infrastructure Projects</h3><p>Roads, utilities, and public works engineered for resilience, scale, and long-term community growth.</p><span class="service-card__link">Learn more<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="service-card__index">02</span></div><div class="service-card" style="opacity: 0; transform: translateY(28px);"><div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 11l9-7 9 7M5 10v10h5v-6h4v6h5V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><h3>Residential Projects</h3><p>Thoughtfully designed homes and apartments that balance comfort, aesthetics, and functionality.</p><span class="service-card__link">Learn more<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="service-card__index">03</span></div><div class="service-card" style="opacity: 0; transform: translateY(28px);"><div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 21V5a2 2 0 012-2h6a2 2 0 012 2v16M14 9h4a2 2 0 012 2v10M7 7h0M7 11h0M7 15h0M11 7h0M11 11h0M11 15h0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><h3>Commercial Projects</h3><p>Offices, retail, and mixed-use spaces built to elevate business and maximize footfall.</p><span class="service-card__link">Learn more<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="service-card__index">04</span></div><div class="service-card" style="opacity: 0; transform: translateY(28px);"><div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3V6M9 3v15M15 6v15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><h3>Land Development</h3><p>Strategic parcelling, plotting, and site readiness that unlock the true potential of every plot.</p><span class="service-card__link">Learn more<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="service-card__index">05</span></div><div class="service-card" style="opacity: 0; transform: translateY(28px);"><div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><h3>Project Planning &amp; Execution</h3><p>Integrated planning, scheduling, and on-ground delivery — on time, on budget, every time.</p><span class="service-card__link">Learn more<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="service-card__index">06</span></div></div></div></section><section class="section projects" id="projects"><div class="container"><div class="section-head"><span class="eyebrow" style="opacity: 0; transform: translateY(28px);">Featured Projects</span><h2 class="section-title" style="opacity: 1; transform: none;">Landmarks that define skylines</h2><p class="section-lead" style="opacity: 1; transform: none;">A selection of our residential, commercial, and infrastructure developments across the country.</p></div><div class="projects__grid"><div class="project-card" style="opacity: 1; transform: none;"><div class="project-card__media"><img src="./Vinayana Infra Projects _ Building Landmarks. Creating Futures._files/photo-1545324418-cc1a3fa10c00" alt="Vinayana Skyline Residences" loading="lazy"><span class="project-card__status is-active">Ongoing</span><span class="project-card__cat">Residential</span></div><div class="project-card__body"><h3>Vinayana Skyline Residences</h3><p class="project-card__loc"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.3-7-11a7 7 0 0114 0c0 4.7-7 11-7 11z" stroke="currentColor" stroke-width="1.8"></path><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.8"></circle></svg>Sector 84, Gurugram</p></div><span class="project-card__view">View Project<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div><div class="project-card" style="opacity: 1; transform: none;"><div class="project-card__media"><img src="./Vinayana Infra Projects _ Building Landmarks. Creating Futures._files/photo-1486406146926-c627a92ad1ab" alt="Aurum Business Park" loading="lazy"><span class="project-card__status is-done">Completed</span><span class="project-card__cat">Commercial</span></div><div class="project-card__body"><h3>Aurum Business Park</h3><p class="project-card__loc"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.3-7-11a7 7 0 0114 0c0 4.7-7 11-7 11z" stroke="currentColor" stroke-width="1.8"></path><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.8"></circle></svg>Hinjewadi, Pune</p></div><span class="project-card__view">View Project<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div><div class="project-card" style="opacity: 1; transform: none;"><div class="project-card__media"><img src="./Vinayana Infra Projects _ Building Landmarks. Creating Futures._files/photo-1502672260266-1c1ef2d93688" alt="Greenfield Township Phase II" loading="lazy"><span class="project-card__status is-active">Ongoing</span><span class="project-card__cat">Land Development</span></div><div class="project-card__body"><h3>Greenfield Township Phase II</h3><p class="project-card__loc"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.3-7-11a7 7 0 0114 0c0 4.7-7 11-7 11z" stroke="currentColor" stroke-width="1.8"></path><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.8"></circle></svg>Sarjapur, Bengaluru</p></div><span class="project-card__view">View Project<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div><div class="project-card" style="opacity: 1; transform: none;"><div class="project-card__media"><img src="./Vinayana Infra Projects _ Building Landmarks. Creating Futures._files/photo-1473042904451-00171c69419d" alt="Metro Connect Flyover" loading="lazy"><span class="project-card__status is-done">Completed</span><span class="project-card__cat">Infrastructure</span></div><div class="project-card__body"><h3>Metro Connect Flyover</h3><p class="project-card__loc"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.3-7-11a7 7 0 0114 0c0 4.7-7 11-7 11z" stroke="currentColor" stroke-width="1.8"></path><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.8"></circle></svg>Outer Ring Road, Hyderabad</p></div><span class="project-card__view">View Project<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div><div class="project-card" style="opacity: 1; transform: none;"><div class="project-card__media"><img src="./Vinayana Infra Projects _ Building Landmarks. Creating Futures._files/photo-1512917774080-9991f1c4c750" alt="The Coronet Villas" loading="lazy"><span class="project-card__status is-soon">Upcoming</span><span class="project-card__cat">Residential</span></div><div class="project-card__body"><h3>The Coronet Villas</h3><p class="project-card__loc"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.3-7-11a7 7 0 0114 0c0 4.7-7 11-7 11z" stroke="currentColor" stroke-width="1.8"></path><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.8"></circle></svg>New Town, Kolkata</p></div><span class="project-card__view">View Project<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div><div class="project-card" style="opacity: 1; transform: none;"><div class="project-card__media"><img src="./Vinayana Infra Projects _ Building Landmarks. Creating Futures._files/photo-1577495508048-b635879837f1" alt="Vinayana Trade Centre" loading="lazy"><span class="project-card__status is-active">Ongoing</span><span class="project-card__cat">Commercial</span></div><div class="project-card__body"><h3>Vinayana Trade Centre</h3><p class="project-card__loc"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.3-7-11a7 7 0 0114 0c0 4.7-7 11-7 11z" stroke="currentColor" stroke-width="1.8"></path><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.8"></circle></svg>Vesu, Surat</p></div><span class="project-card__view">View Project<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></div></div></section><section class="section section-alt board" id="board"><div class="container"><div class="section-head center"><span class="eyebrow" style="opacity: 1; transform: none;">Leadership</span><h2 class="section-title" style="opacity: 1; transform: none;">Our Team</h2><p class="section-lead" style="margin: 0px auto; opacity: 1; transform: none;">The founders and leaders whose collective experience shapes every Vinayana Infra landmark.</p></div><div class="board__grid board__grid--team"><div class="director-card" style="opacity: 1; transform: none;"><div class="director-card__photo "><span class="director-card__initials">VK</span></div><h3>Vijay Kumar</h3><span class="director-card__role">Founder</span><p>Founder of Vinayana Infra Projects, driving the company's vision, strategy, and long-term growth.</p><div class="director-card__actions"><a href="http://localhost:5173/#" class="director-card__social" aria-label="Vijay Kumar on LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0H12v2.2h.07c.63-1.2 2.17-2.46 4.46-2.46C21.4 7.74 24 10.1 24 14.6V24h-5v-8.4c0-2-.04-4.57-2.79-4.57-2.79 0-3.21 2.18-3.21 4.43V24h-5V8z"></path></svg></a></div></div><div class="director-card" style="opacity: 1; transform: none;"><div class="director-card__photo has-img"><img class="director-photo-img " src="./Vinayana Infra Projects _ Building Landmarks. Creating Futures._files/director1.png" alt="Chirag Daxini" loading="lazy"></div><h3>Chirag Daxini</h3><span class="director-card__role">Co-Founder</span><p>25+ years in Banking &amp; Financial Services — retail, MSME &amp; SME lending, real estate and project finance, and high-performing team building.</p><div class="director-card__actions"><button class="director-card__profile-btn">View Full Profile</button><a href="http://localhost:5173/#" class="director-card__social" aria-label="Chirag Daxini on LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0H12v2.2h.07c.63-1.2 2.17-2.46 4.46-2.46C21.4 7.74 24 10.1 24 14.6V24h-5v-8.4c0-2-.04-4.57-2.79-4.57-2.79 0-3.21 2.18-3.21 4.43V24h-5V8z"></path></svg></a></div></div><div class="director-card" style="opacity: 1; transform: none;"><div class="director-card__photo "><span class="director-card__initials">SS</span></div><h3>Shailesh Sharma</h3><span class="director-card__role">Director</span><p>Director overseeing business operations and strategic execution across the company’s projects.</p><div class="director-card__actions"><a href="http://localhost:5173/#" class="director-card__social" aria-label="Shailesh Sharma on LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0H12v2.2h.07c.63-1.2 2.17-2.46 4.46-2.46C21.4 7.74 24 10.1 24 14.6V24h-5v-8.4c0-2-.04-4.57-2.79-4.57-2.79 0-3.21 2.18-3.21 4.43V24h-5V8z"></path></svg></a></div></div><div class="director-card" style="opacity: 1; transform: none;"><div class="director-card__photo "><span class="director-card__initials">SY</span></div><h3>Suresh Yadav</h3><span class="director-card__role">Head – Projects</span><p>Head of Projects, leading on-ground delivery, scheduling, and execution quality from start to handover.</p><div class="director-card__actions"><a href="http://localhost:5173/#" class="director-card__social" aria-label="Suresh Yadav on LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0H12v2.2h.07c.63-1.2 2.17-2.46 4.46-2.46C21.4 7.74 24 10.1 24 14.6V24h-5v-8.4c0-2-.04-4.57-2.79-4.57-2.79 0-3.21 2.18-3.21 4.43V24h-5V8z"></path></svg></a></div></div><div class="director-card" style="opacity: 1; transform: none;"><div class="director-card__photo "><span class="director-card__initials">CL</span></div><h3>Ar. Chetan Limbachiya</h3><span class="director-card__role">Head Architect</span><p>Head Architect shaping the design vision, space planning, and architectural excellence of every project.</p><div class="director-card__actions"><a href="http://localhost:5173/#" class="director-card__social" aria-label="Ar. Chetan Limbachiya on LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0H12v2.2h.07c.63-1.2 2.17-2.46 4.46-2.46C21.4 7.74 24 10.1 24 14.6V24h-5v-8.4c0-2-.04-4.57-2.79-4.57-2.79 0-3.21 2.18-3.21 4.43V24h-5V8z"></path></svg></a></div></div></div></div></section><section class="section board board--mentors" id="mentors"><div class="container"><div class="section-head center"><span class="eyebrow" style="opacity: 1; transform: none;">Guidance</span><h2 class="section-title" style="opacity: 1; transform: none;">Our Mentors</h2><p class="section-lead" style="margin: 0px auto; opacity: 1; transform: none;">Distinguished advisors whose decades of administrative, technical and financial wisdom guide our journey.</p></div><div class="board__grid board__grid--mentors"><div class="director-card" style="opacity: 1; transform: none;"><div class="director-card__photo has-img"><img class="director-photo-img " src="./Vinayana Infra Projects _ Building Landmarks. Creating Futures._files/director2.jpeg" alt="Sh. S. N. Joshi, IAS" loading="lazy" style="object-position: 50% 30%;"></div><h3>Sh. S. N. Joshi, IAS</h3><span class="director-card__role">Mentor · Retired IAS</span><p>Senior IAS administrator with 40+ years in general administration, infrastructure development, and large-scale project planning across Government of Rajasthan &amp; India.</p><div class="director-card__actions"><button class="director-card__profile-btn">View Full Profile</button><a href="http://localhost:5173/#" class="director-card__social" aria-label="Sh. S. N. Joshi, IAS on LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0H12v2.2h.07c.63-1.2 2.17-2.46 4.46-2.46C21.4 7.74 24 10.1 24 14.6V24h-5v-8.4c0-2-.04-4.57-2.79-4.57-2.79 0-3.21 2.18-3.21 4.43V24h-5V8z"></path></svg></a></div></div><div class="director-card" style="opacity: 1; transform: none;"><div class="director-card__photo has-img"><img class="director-photo-img " src="./Vinayana Infra Projects _ Building Landmarks. Creating Futures._files/mentor2.jpeg" alt="Sh. Sushil Kumar Relan" loading="lazy" style="object-position: 50% 22%;"></div><h3>Sh. Sushil Kumar Relan</h3><span class="director-card__role">Mentor · Banking &amp; Finance</span><p>Veteran banker — Non-Executive Director at Pratyancha Financial Services and former Deputy General Manager, State Bank of India.</p><div class="director-card__actions"><button class="director-card__profile-btn">View Full Profile</button><a href="http://localhost:5173/#" class="director-card__social" aria-label="Sh. Sushil Kumar Relan on LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0H12v2.2h.07c.63-1.2 2.17-2.46 4.46-2.46C21.4 7.74 24 10.1 24 14.6V24h-5v-8.4c0-2-.04-4.57-2.79-4.57-2.79 0-3.21 2.18-3.21 4.43V24h-5V8z"></path></svg></a></div></div></div></div></section><section class="section why" id="why"><div class="why__bg" aria-hidden="true"></div><div class="container"><div class="section-head center"><span class="eyebrow" style="color: var(--gold-soft); opacity: 0; transform: translateY(28px);">Why Choose Us</span><h2 class="section-title why__title" style="opacity: 0; transform: translateY(28px);">Built on trust. Driven by excellence.</h2><p class="section-lead why__lead" style="margin: 0px auto; opacity: 0; transform: translateY(28px);">Six promises that make Vinayana Infra the partner of choice for developers, investors, and families alike.</p></div><div class="why__grid"><div class="why-card" style="opacity: 0; transform: translateY(28px);"><div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l3 6 6 1-4.5 4.5 1 6L12 17l-5.5 2.5 1-6L3 9l6-1 3-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div><h4>Quality Construction</h4><p>Certified materials and rigorous quality control at every stage of the build.</p></div></div><div class="why-card" style="opacity: 0; transform: translateY(28px);"><div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7zM12 9a3 3 0 100 6 3 3 0 000-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div><h4>Transparent Process</h4><p>Clear pricing, honest timelines, and regular updates — no hidden surprises.</p></div></div><div class="why-card" style="opacity: 0; transform: translateY(28px);"><div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 21v-4l11-11 4 4L7 21H3zM14 6l4 4M3 3h6M3 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div><h4>Modern Design</h4><p>Contemporary architecture that blends aesthetics with everyday functionality.</p></div></div><div class="why-card" style="opacity: 0; transform: translateY(28px);"><div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 7v5l3 2M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div><h4>Timely Delivery</h4><p>Disciplined project management that puts your handover date front and centre.</p></div></div><div class="why-card" style="opacity: 0; transform: translateY(28px);"><div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M17 20v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2M10 10a3.5 3.5 0 100-7 3.5 3.5 0 000 7zM21 20v-2a4 4 0 00-3-3.87M16 3.5a3.5 3.5 0 010 6.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div><h4>Trusted Team</h4><p>Seasoned architects, engineers, and craftsmen committed to your vision.</p></div></div><div class="why-card" style="opacity: 0; transform: translateY(28px);"><div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22c5-3 8-7 8-12a8 8 0 00-8-8 8 8 0 00-8 8c0 5 3 9 8 12zM12 22V11M12 11c-2 0-3.5-1.5-3.5-3.5M12 11c2 0 3.5-1.2 3.5-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div><h4>Sustainable Planning</h4><p>Eco-conscious materials and energy-smart design for a greener tomorrow.</p></div></div></div></div></section><section class="section section-alt contact" id="contact"><div class="container"><div class="section-head center"><span class="eyebrow" style="opacity: 0; transform: translateY(28px);">Get In Touch</span><h2 class="section-title" style="opacity: 0; transform: translateY(28px);">Let's build something remarkable</h2><p class="section-lead" style="margin: 0px auto; opacity: 0; transform: translateY(28px);">Have a project in mind or a question for our team? Reach out — we typically respond within one business day.</p></div><div class="contact__grid"><div class="contact__info" style="opacity: 0; transform: translateY(28px);"><a href="tel:+919876543210" class="contact__info-card"><span class="contact__info-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span><strong>Call Us</strong><em>+91 98765 43210</em></span></a><a href="mailto:info@vinayanainfra.com" class="contact__info-card"><span class="contact__info-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zM2 7l10 6 10-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span><strong>Email Us</strong><em>info@vinayanainfra.com</em></span></a><a href="http://localhost:5173/#contact" class="contact__info-card"><span class="contact__info-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.3-7-11a7 7 0 0114 0c0 4.7-7 11-7 11zM12 7.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span><strong>Visit Us</strong><em>Vinayana House, Business Bay, Ahmedabad, Gujarat 380015</em></span></a><div class="contact__map"><iframe title="Vinayana Infra office location" src="./Vinayana Infra Projects _ Building Landmarks. Creating Futures._files/maps.html" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div><div class="contact__form-wrap" style="opacity: 0; transform: translateY(28px);"><form class="contact__form"><div class="contact__row"><div class="field"><label for="name">Full Name</label><input id="name" name="name" placeholder="Your name" required="" value=""></div><div class="field"><label for="phone">Phone</label><input id="phone" name="phone" placeholder="+91 00000 00000" value=""></div></div><div class="contact__row"><div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@email.com" required="" value=""></div><div class="field"><label for="subject">Subject</label><input id="subject" name="subject" placeholder="Project enquiry" value=""></div></div><div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required=""></textarea></div><button class="btn btn-primary contact__submit" type="submit">Send Message<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button></form></div></div></div></section></main><footer class="footer"><div class="container footer__grid"><div class="footer__brand"><a href="http://localhost:5173/#home" class="footer__logo"><img src="./Vinayana Infra Projects _ Building Landmarks. Creating Futures._files/logo-white.png" alt="Vinayana Infra Projects"></a><p>Building landmarks and creating futures through modern real estate and infrastructure solutions — driven by quality, trust, and innovation.</p><div class="footer__socials"><a href="http://localhost:5173/#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0H12v2.2h.07c.63-1.2 2.17-2.46 4.46-2.46C21.4 7.74 24 10.1 24 14.6V24h-5v-8.4c0-2-.04-4.57-2.79-4.57-2.79 0-3.21 2.18-3.21 4.43V24h-5V8z"></path></svg></a><a href="http://localhost:5173/#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 01-.9 1.38c-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.12 1.38C1.35 2.68.93 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.12.66.66 1.33 1.08 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.8 5.8 0 002.12-1.38c.66-.66 1.08-1.33 1.38-2.12.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.8 5.8 0 00-1.38-2.12A5.8 5.8 0 0019.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 105.84 12 6.16 6.16 0 0012 5.84zm0 10.16A4 4 0 1116 12a4 4 0 01-4 4zm6.4-10.4a1.44 1.44 0 11-1.44-1.44 1.44 1.44 0 011.44 1.44z"></path></svg></a><a href="http://localhost:5173/#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07c0 6.02 4.39 11.01 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.08 24 18.09 24 12.07z"></path></svg></a></div></div><div class="footer__col"><h4>Quick Links</h4><ul><li><a href="http://localhost:5173/#home">Home</a></li><li><a href="http://localhost:5173/#about">About Us</a></li><li><a href="http://localhost:5173/#projects">Projects</a></li><li><a href="http://localhost:5173/#board">Our Team</a></li><li><a href="http://localhost:5173/#mentors">Our Mentors</a></li><li><a href="http://localhost:5173/#contact">Contact</a></li></ul></div><div class="footer__col"><h4>Our Services</h4><ul><li><a href="http://localhost:5173/#services">Real Estate Development</a></li><li><a href="http://localhost:5173/#services">Infrastructure Projects</a></li><li><a href="http://localhost:5173/#services">Residential Projects</a></li><li><a href="http://localhost:5173/#services">Commercial Projects</a></li><li><a href="http://localhost:5173/#services">Land Development</a></li></ul></div><div class="footer__col"><h4>Contact</h4><ul class="footer__contact"><li>Vinayana House, Business Bay,<br>Ahmedabad, Gujarat 380015</li><li><a href="tel:+919876543210">+91 98765 43210</a></li><li><a href="mailto:info@vinayanainfra.com">info@vinayanainfra.com</a></li></ul></div></div><div class="footer__bar"><div class="container footer__bar-inner"><p>© 2026 Vinayana Infra Projects. All rights reserved.</p><p class="footer__bar-links"><a href="http://localhost:5173/#">Privacy Policy</a><span>·</span><a href="http://localhost:5173/#">Terms of Service</a></p></div></div></footer></div>
+    <script type="module" src="./Vinayana Infra Projects _ Building Landmarks. Creating Futures._files/main.jsx"></script>
+  
+
+</body></html>

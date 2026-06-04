@@ -1,0 +1,120 @@
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.project-card {
+  position: relative;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-card__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.project-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease);
+}
+
+.project-card:hover .project-card__media img { transform: scale(1.1); }
+
+.project-card__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, rgba(6, 26, 48, 0.55));
+  opacity: 0.85;
+}
+
+.project-card__status,
+.project-card__cat {
+  position: absolute;
+  z-index: 2;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 6px 13px;
+  border-radius: 50px;
+  backdrop-filter: blur(4px);
+}
+
+.project-card__status { top: 14px; left: 14px; color: var(--white); }
+.project-card__status.is-done { background: rgba(46, 160, 110, 0.92); }
+.project-card__status.is-active { background: rgba(201, 163, 91, 0.95); color: var(--navy-deep); }
+.project-card__status.is-soon { background: rgba(10, 37, 64, 0.85); color: var(--white); }
+
+.project-card__cat {
+  top: 14px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--navy);
+}
+
+.project-card__body {
+  position: relative;
+  z-index: 2;
+  padding: 22px 24px 26px;
+}
+
+.project-card__body h3 {
+  font-size: 1.22rem;
+  margin-bottom: 8px;
+  transition: color 0.35s var(--ease);
+}
+
+.project-card:hover .project-card__body h3 { color: var(--gold); }
+
+.project-card__loc {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.project-card__loc svg { color: var(--gold); flex-shrink: 0; }
+
+.project-card__view {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--white);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
+}
+
+.project-card:hover .project-card__view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* On hover, move the body text up a touch so the View link has room */
+@media (max-width: 960px) {
+  .projects__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .projects__grid { grid-template-columns: 1fr; }
+}

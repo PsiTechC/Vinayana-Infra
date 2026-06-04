@@ -1,0 +1,8 @@
+contacts.json
+*.exe
+vinayana-infra-backend
+run.sh
+.env
+Dockerfile
+.dockerignore
+.gitignore

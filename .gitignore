@@ -1,0 +1,11 @@
+# secrets
+.env
+
+# OS / filesystem cruft
+.DS_Store
+.smbdelete*
+._*
+
+# local editor / tool settings
+.claude/settings.local.json
+**/.claude/settings.local.json
