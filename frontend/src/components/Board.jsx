@@ -7,10 +7,14 @@ const TEAM = [
   {
     name: 'Vijay Kumar',
     role: 'Founder',
-    photo: null,
+    photo: '/assets/vijaykumar.jpeg',
     initials: 'VK',
     short: "Founder of Vinayana Infra Projects, driving the company's vision, strategy, and long-term growth.",
-    bio: [],
+    bio: [
+      'Mr. Vijay Kumar is the Promoter and Director of Pratyancha and is also associated with Sai Samarpan Micro Credit, a financial institution dedicated to promoting financial inclusion and empowering underserved communities. He holds a Bachelor of Science (B.Sc.) and Bachelor of Education (B.Ed.), completed in 2007, and hails from Jaunpur, Uttar Pradesh.',
+      'Driven by a vision to support sustainable socio-economic development, he founded Sai Samarpan Micro Credit in 2011, leveraging his own resources along with contributions from fellow shareholders to provide accessible financial services to individuals and small enterprises. Over the years, he has played a key role in strengthening the organization’s growth, governance, and operational excellence.',
+      'With more than 14 years of experience in corporate governance, business management, and financial services, he has been associated with multiple companies and brings extensive expertise in strategic planning, regulatory compliance, stakeholder engagement, and organizational development. His leadership continues to contribute significantly to the advancement of inclusive finance and sustainable business practices.',
+    ],
     domains: [],
     linkedin: '#',
   },
@@ -40,7 +44,7 @@ const TEAM = [
   {
     name: 'Shailesh Sharma',
     role: 'Director',
-    photo: '/assets/shileshsharma1.jpg',
+    photo: '/assets/shailesh.jpeg',
     initials: 'SS',
     short: 'Director overseeing business operations and strategic execution across the company’s projects.',
     bio: [
