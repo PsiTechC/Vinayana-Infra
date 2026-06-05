@@ -1,6 +1,11 @@
 # secrets
 .env
 
+# stray root-level Node test artifacts (nodemailer experiments)
+/node_modules/
+/package.json
+/package-lock.json
+
 # OS / filesystem cruft
 .DS_Store
 .smbdelete*

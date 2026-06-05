@@ -2,4 +2,7 @@ contacts.json
 *.exe
 vinayana-infra-backend
 run.sh
+run.ps1
+testmail.js
+node_modules/
 .env

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"crypto/tls"
 	"fmt"
 	"log"
 	"net/smtp"
@@ -64,8 +65,107 @@ func (m *Mailer) Send(sub ContactSubmission) error {
 	msg := buildMessage(m.from, m.to, sub.Email, "[Vinayana Infra] "+subject, body)
 
 	addr := m.host + ":" + m.port
-	auth := smtp.PlainAuth("", m.user, m.pass, m.host)
-	return smtp.SendMail(addr, auth, m.from, []string{m.to}, []byte(msg))
+	// This host (MailEnable / typical cPanel) advertises only AUTH LOGIN, which
+	// Go's stdlib doesn't implement — so we use our own LOGIN mechanism below.
+	auth := &loginAuth{user: m.user, pass: m.pass}
+
+	// Port 465 speaks TLS from the first byte (implicit TLS / SMTPS). Go's
+	// smtp.SendMail can't do that — it only upgrades via STARTTLS — so we dial
+	// the TLS connection ourselves. Ports 587/25 connect plain then STARTTLS.
+	if m.port == "465" {
+		return m.sendImplicitTLS(addr, auth, []byte(msg))
+	}
+	return m.sendStartTLS(addr, auth, []byte(msg))
+}
+
+// tlsConfig builds the TLS settings used for both implicit TLS and STARTTLS.
+// Shared hosting (MailEnable/cPanel) usually presents the provider's own
+// certificate (e.g. CN=whgi.net), not one matching mail.<domain>, so strict
+// hostname verification fails. The channel stays TLS-encrypted; we just skip
+// the name check. Set SMTP_STRICT_TLS=1 to enforce verification.
+func (m *Mailer) tlsConfig() *tls.Config {
+	return &tls.Config{
+		ServerName:         m.host,
+		InsecureSkipVerify: getenv("SMTP_STRICT_TLS", "") == "",
+	}
+}
+
+// sendImplicitTLS delivers over a connection that is TLS-encrypted from the
+// first byte (the SMTPS scheme used on port 465).
+func (m *Mailer) sendImplicitTLS(addr string, auth smtp.Auth, msg []byte) error {
+	conn, err := tls.Dial("tcp", addr, m.tlsConfig())
+	if err != nil {
+		return fmt.Errorf("tls dial %s: %w", addr, err)
+	}
+	c, err := smtp.NewClient(conn, m.host)
+	if err != nil {
+		return fmt.Errorf("smtp client: %w", err)
+	}
+	return m.deliver(c, auth, msg)
+}
+
+// sendStartTLS connects in the clear, upgrades to TLS via STARTTLS, then sends
+// (the scheme used on ports 587/25).
+func (m *Mailer) sendStartTLS(addr string, auth smtp.Auth, msg []byte) error {
+	c, err := smtp.Dial(addr)
+	if err != nil {
+		return fmt.Errorf("smtp dial %s: %w", addr, err)
+	}
+	if ok, _ := c.Extension("STARTTLS"); ok {
+		if err := c.StartTLS(m.tlsConfig()); err != nil {
+			return fmt.Errorf("starttls: %w", err)
+		}
+	}
+	return m.deliver(c, auth, msg)
+}
+
+// deliver runs AUTH + the MAIL/RCPT/DATA exchange on an established client.
+func (m *Mailer) deliver(c *smtp.Client, auth smtp.Auth, msg []byte) error {
+	defer c.Close()
+	if err := c.Auth(auth); err != nil {
+		return fmt.Errorf("smtp auth: %w", err)
+	}
+	if err := c.Mail(m.from); err != nil {
+		return fmt.Errorf("smtp MAIL FROM: %w", err)
+	}
+	if err := c.Rcpt(m.to); err != nil {
+		return fmt.Errorf("smtp RCPT TO: %w", err)
+	}
+	wc, err := c.Data()
+	if err != nil {
+		return fmt.Errorf("smtp DATA: %w", err)
+	}
+	if _, err := wc.Write(msg); err != nil {
+		return fmt.Errorf("smtp write body: %w", err)
+	}
+	if err := wc.Close(); err != nil {
+		return fmt.Errorf("smtp close body: %w", err)
+	}
+	return c.Quit()
+}
+
+// loginAuth implements the SMTP AUTH LOGIN mechanism, which Go's net/smtp
+// omits (it ships only PLAIN and CRAM-MD5). Many Windows/cPanel mail servers
+// (MailEnable here) advertise LOGIN only. We always run it inside a TLS
+// channel (implicit on 465, STARTTLS on 587), so credentials aren't exposed.
+type loginAuth struct{ user, pass string }
+
+func (a *loginAuth) Start(*smtp.ServerInfo) (string, []byte, error) {
+	return "LOGIN", nil, nil
+}
+
+func (a *loginAuth) Next(fromServer []byte, more bool) ([]byte, error) {
+	if !more {
+		return nil, nil
+	}
+	switch prompt := strings.ToLower(strings.TrimSpace(string(fromServer))); {
+	case strings.Contains(prompt, "user"):
+		return []byte(a.user), nil
+	case strings.Contains(prompt, "pass"):
+		return []byte(a.pass), nil
+	default:
+		return nil, fmt.Errorf("unexpected SMTP LOGIN challenge: %q", fromServer)
+	}
 }
 
 // buildBody renders a readable plain-text email from a submission.
