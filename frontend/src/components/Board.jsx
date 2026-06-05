@@ -40,7 +40,7 @@ const TEAM = [
   {
     name: 'Shailesh Sharma',
     role: 'Director',
-    photo: '/assets/shailesh.jpeg',
+    photo: '/assets/shileshsharma1.jpg',
     initials: 'SS',
     short: 'Director overseeing business operations and strategic execution across the company’s projects.',
     bio: [
@@ -67,9 +67,9 @@ const TEAM = [
     initials: 'RJ',
     short: 'A pharmacy professional with hands-on experience across hospital operations, pharmaceutical manufacturing, and quality management.',
     bio: [
-      'Mr. Rishu Jaiswal is a dedicated pharmacy professional currently pursuing his Master of Pharmacy (M.Pharm) and building a strong career in the healthcare and pharmaceutical sectors. With academic training in pharmacy and hands-on industry experience, he has developed expertise in hospital operations, patient care, pharmaceutical manufacturing, and quality management.',
-      'He has gained valuable practical exposure through his work at Dr. SPM Civil Hospital, Lucknow, Lok Bandhu Shri Raj Narayan Combined Hospital, and Synokem Pharmaceuticals Ltd., where he contributed to emergency patient care, hospital administration, production processes, quality assurance (QA), quality control (QC), and compliance with Good Manufacturing Practices (GMP). These experiences have strengthened his technical knowledge, problem-solving abilities, and commitment to maintaining high standards of healthcare and pharmaceutical excellence.',
-      'Alongside his professional experience, Mr. Jaiswal has demonstrated leadership and communication skills through his role as a college coordinator and event anchor. Passionate about continuous learning and professional growth, he is committed to contributing effectively to the advancement of healthcare services and the pharmaceutical industry.',
+      'Ms. Rishu Jaiswal is a dedicated pharmacy professional currently pursuing her Master of Pharmacy (M.Pharm) and building a strong career in the healthcare and pharmaceutical sectors. With academic training in pharmacy and hands-on industry experience, she has developed expertise in hospital operations, patient care, pharmaceutical manufacturing, and quality management.',
+      'She has gained valuable practical exposure through her work at Dr. SPM Civil Hospital, Lucknow, Lok Bandhu Shri Raj Narayan Combined Hospital, and Synokem Pharmaceuticals Ltd., where she contributed to emergency patient care, hospital administration, production processes, quality assurance (QA), quality control (QC), and compliance with Good Manufacturing Practices (GMP). These experiences have strengthened her technical knowledge, problem-solving abilities, and commitment to maintaining high standards of healthcare and pharmaceutical excellence.',
+      'Alongside her professional experience, Ms. Jaiswal has demonstrated leadership and communication skills through her role as a college coordinator and event anchor. Passionate about continuous learning and professional growth, she is committed to contributing effectively to the advancement of healthcare services and the pharmaceutical industry.',
     ],
     domains: [
       'Hospital Operations', 'Patient Care', 'Emergency Care',

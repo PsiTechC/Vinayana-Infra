@@ -6,8 +6,12 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
+    host: '0.0.0.0',
+    watch: {
+      usePolling: true,
+      interval: 1000,
+    },
     proxy: {
-      // Proxy API calls to the Go backend during development
       '/api': {
         target: 'http://localhost:8090',
         changeOrigin: true,

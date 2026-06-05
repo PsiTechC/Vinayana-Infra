@@ -5,25 +5,25 @@ import './Projects.css'
 // Fallback data — used if the backend API is unavailable.
 const FALLBACK = [
   {
-    title: 'Aurum Business Park',
-    location: 'Hinjewadi, Pune',
-    status: 'Completed',
-    category: 'Commercial',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    title: 'Metro Connect Flyover',
-    location: 'Outer Ring Road, Hyderabad',
-    status: 'Completed',
-    category: 'Infrastructure',
-    image: 'https://images.unsplash.com/photo-1473042904451-00171c69419d?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    title: 'The Coronet Villas',
-    location: 'New Town, Kolkata',
-    status: 'Completed',
+    title: 'Vinayana Skyline Residences',
+    location: 'Sector 84, Gurugram',
+    status: 'Ongoing',
     category: 'Residential',
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    title: 'Greenfield Township Phase II',
+    location: 'Sarjapur, Bengaluru',
+    status: 'Ongoing',
+    category: 'Land Development',
+    image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    title: 'Vinayana Trade Centre',
+    location: 'Vesu, Surat',
+    status: 'Ongoing',
+    category: 'Commercial',
+    image: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=900&q=80',
   },
 ]
 

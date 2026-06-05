@@ -5,7 +5,6 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Services from './components/Services'
-import Projects from './components/Projects'
 import Board from './components/Board'
 import WhyChooseUs from './components/WhyChooseUs'
 import Contact from './components/Contact'
@@ -54,7 +53,6 @@ export default function App() {
         <Hero />
         <About />
         <Services />
-        <Projects />
         <Board />
         <WhyChooseUs />
         <Contact />

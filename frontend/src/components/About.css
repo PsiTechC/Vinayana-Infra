@@ -24,6 +24,7 @@
   left: 0;
   width: 74%;
   aspect-ratio: 3 / 4;
+  animation: about-float-main 7s ease-in-out infinite;
 }
 
 .about__media-sub {
@@ -32,6 +33,17 @@
   width: 52%;
   aspect-ratio: 4 / 3;
   border: 6px solid var(--white);
+  animation: about-float-sub 6s ease-in-out infinite;
+}
+
+@keyframes about-float-main {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-16px); }
+}
+
+@keyframes about-float-sub {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(14px); }
 }
 
 .about__media-main img,
@@ -55,6 +67,12 @@
   box-shadow: var(--shadow-md);
   text-align: center;
   z-index: 2;
+  animation: about-float-badge 5s ease-in-out infinite;
+}
+
+@keyframes about-float-badge {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
 }
 
 .about__badge-num {
@@ -117,7 +135,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .about__pillar-dot { animation: none; }
+  .about__pillar-dot,
+  .about__media-main,
+  .about__media-sub,
+  .about__badge { animation: none; }
 }
 
 .about__pillar h4 {

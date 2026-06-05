@@ -15,10 +15,7 @@ var emailRe = regexp.MustCompile(`^[^@\s]+@[^@\s]+\.[^@\s]+$`)
 // seedProjects is the featured-project list served to the website.
 var seedProjects = []Project{
 	{ID: 1, Title: "Vinayana Skyline Residences", Location: "Sector 84, Gurugram", Status: "Ongoing", Category: "Residential", Image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80"},
-	{ID: 2, Title: "Aurum Business Park", Location: "Hinjewadi, Pune", Status: "Completed", Category: "Commercial", Image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80"},
 	{ID: 3, Title: "Greenfield Township Phase II", Location: "Sarjapur, Bengaluru", Status: "Ongoing", Category: "Land Development", Image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=80"},
-	{ID: 4, Title: "Metro Connect Flyover", Location: "Outer Ring Road, Hyderabad", Status: "Completed", Category: "Infrastructure", Image: "https://images.unsplash.com/photo-1473042904451-00171c69419d?auto=format&fit=crop&w=900&q=80"},
-	{ID: 5, Title: "The Coronet Villas", Location: "New Town, Kolkata", Status: "Upcoming", Category: "Residential", Image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80"},
 	{ID: 6, Title: "Vinayana Trade Centre", Location: "Vesu, Surat", Status: "Ongoing", Category: "Commercial", Image: "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=900&q=80"},
 }
 
