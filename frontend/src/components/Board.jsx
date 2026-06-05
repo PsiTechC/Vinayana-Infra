@@ -187,6 +187,27 @@ function Avatar({ d, className = '' }) {
 
 function PersonCard({ d, delay, onView, plain = false, ariaHidden = false }) {
   const hasProfile = d.bio.length > 0
+
+  // Make the WHOLE card open the profile, so it's clickable from anywhere even
+  // while the row is auto-scrolling — no need to chase the small moving button.
+  // We detect a tap from raw pointer events (press + release with no real
+  // movement) rather than the native click: the card sits inside a horizontally
+  // scrollable, animating row, so the browser otherwise reinterprets a tap as a
+  // pan and cancels the click. Pointer coordinates are used, so card motion
+  // during the tap doesn't matter. A swipe/drag moves the pointer → no open.
+  const downRef = useRef(null)
+  const onCardDown = (e) => {
+    if (!hasProfile) return
+    downRef.current = { x: e.clientX, y: e.clientY }
+  }
+  const onCardUp = (e) => {
+    const s = downRef.current
+    downRef.current = null
+    // let the LinkedIn link keep its own action
+    if (!hasProfile || !s || e.target.closest('.director-card__social')) return
+    if (Math.abs(e.clientX - s.x) + Math.abs(e.clientY - s.y) < 12) onView()
+  }
+
   const inner = (
     <>
       <div className={`director-card__photo ${d.photo ? 'has-img' : ''}`}>
@@ -198,7 +219,12 @@ function PersonCard({ d, delay, onView, plain = false, ariaHidden = false }) {
 
       <div className="director-card__actions">
         {hasProfile && (
-          <button className="director-card__profile-btn" onClick={onView}>
+          <button
+            className="director-card__profile-btn"
+            type="button"
+            // keyboard only (Enter/Space); pointer taps are handled at card level
+            onClick={(e) => { if (e.detail === 0) onView() }}
+          >
             View Full Profile
           </button>
         )}
@@ -209,18 +235,30 @@ function PersonCard({ d, delay, onView, plain = false, ariaHidden = false }) {
     </>
   )
 
+  const cardClass = `director-card ${hasProfile ? 'director-card--clickable' : ''}`
+
   // Inside the auto-scrolling marquee we render a plain card (no scroll-reveal,
   // so duplicated/off-screen copies stay visible as they slide into view).
   if (plain) {
     return (
-      <div className="director-card" aria-hidden={ariaHidden || undefined}>
+      <div
+        className={cardClass}
+        aria-hidden={ariaHidden || undefined}
+        onPointerDown={onCardDown}
+        onPointerUp={onCardUp}
+      >
         {inner}
       </div>
     )
   }
 
   return (
-    <Reveal className="director-card" delay={delay}>
+    <Reveal
+      className={cardClass}
+      delay={delay}
+      onPointerDown={onCardDown}
+      onPointerUp={onCardUp}
+    >
       {inner}
     </Reveal>
   )
@@ -294,9 +332,47 @@ export default function Board() {
     }
   }, [])
 
+  // Pause the auto-scroll, then resume after a quiet period, resyncing the
+  // float position so the RAF loop continues from wherever the user left off
+  // (and normalising into the first copy so the seamless loop stays intact).
+  const resumeRef = useRef(null)
+  const scheduleResume = (delay = 1400) => {
+    clearTimeout(resumeRef.current)
+    resumeRef.current = setTimeout(() => {
+      const el = trackRef.current
+      if (el) {
+        const half = el.scrollWidth / 2
+        let p = el.scrollLeft
+        if (half > 0) {
+          if (p >= half) p -= half
+          else if (p < 0) p += half
+          el.scrollLeft = p
+        }
+        posRef.current = p
+      }
+      pausedRef.current = false
+    }, delay)
+  }
+
+  // Freeze the row the instant an interaction starts (press, touch, or pen) so
+  // the animation loop can't shift a card out from under the click between
+  // pointerdown and pointerup — that mismatch is what made "View Full Profile"
+  // misfire mid-animation. Also lets a swipe scroll without being fought.
+  // We DON'T pause on plain hover: the strip is full-width (100vw), so a resting
+  // cursor would keep it paused forever and the auto-scroll would never run.
+  const onPressStart = () => {
+    pausedRef.current = true
+    clearTimeout(resumeRef.current)
+  }
+  const onPressEnd = () => scheduleResume()
+  // Trackpad / wheel horizontal scroll: pause while scrolling, resume after.
+  const onWheelInteract = () => {
+    pausedRef.current = true
+    scheduleResume(700)
+  }
+
   // Manual nudge via the arrows. Pause the auto-scroll briefly so the browser's
   // smooth scroll isn't overwritten by the animation frame loop.
-  const resumeRef = useRef(null)
   const nudge = (dir) => {
     const el = trackRef.current
     if (!el) return
@@ -304,11 +380,7 @@ export default function Board() {
     if (dir < 0 && el.scrollLeft < 360) el.scrollLeft += half
     pausedRef.current = true
     el.scrollBy({ left: dir * 360, behavior: 'smooth' })
-    clearTimeout(resumeRef.current)
-    resumeRef.current = setTimeout(() => {
-      posRef.current = el.scrollLeft // resync after the manual scroll
-      pausedRef.current = false
-    }, 800)
+    scheduleResume(800)
   }
 
   return (
@@ -340,8 +412,10 @@ export default function Board() {
             <div
               className="board__marquee"
               ref={trackRef}
-              onMouseEnter={() => { pausedRef.current = true }}
-              onMouseLeave={() => { pausedRef.current = false }}
+              onPointerDown={onPressStart}
+              onPointerUp={onPressEnd}
+              onPointerCancel={onPressEnd}
+              onWheel={onWheelInteract}
             >
               <div className="board__marquee-track">
                 {/* two copies of the team make the loop seamless */}

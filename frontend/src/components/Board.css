@@ -125,6 +125,13 @@
   border-color: var(--gold);
 }
 
+/* whole card opens the profile — make that affordance clear and tap-friendly */
+.director-card--clickable {
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .director-card__photo {
   width: 118px;
   height: 118px;
@@ -197,6 +204,11 @@
   border-radius: 50px;
   border: 1.5px solid var(--border);
   background: var(--white);
+  cursor: pointer;
+  /* opt the button out of pan/zoom gestures so a tap is never swallowed by the
+     surrounding horizontal scroller, and remove the mobile tap-delay */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   transition: border-color 0.35s var(--ease), background 0.35s var(--ease),
     color 0.35s var(--ease), transform 0.35s var(--ease);
 }
