@@ -19,10 +19,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 84px;
+  height: 92px;
 }
 
-.navbar--scrolled .navbar__inner { height: 72px; }
+.navbar--scrolled .navbar__inner { height: 78px; }
 .navbar__inner { transition: height 0.45s var(--ease); }
 
 /* Brand */
@@ -33,18 +33,18 @@
 }
 
 .navbar__mark {
-  height: 50px;
+  height: 60px;
   width: auto;
   object-fit: contain;
   transition: height 0.45s var(--ease);
 }
 
-.navbar--scrolled .navbar__mark { height: 44px; }
+.navbar--scrolled .navbar__mark { height: 52px; }
 
 .navbar__wordmark {
   font-family: var(--font-head);
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.58rem;
   line-height: 1;
   color: var(--navy);
   letter-spacing: 0.02em;
@@ -56,7 +56,7 @@
   font-style: normal;
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   letter-spacing: 0.34em;
   text-transform: uppercase;
   color: var(--gold);
@@ -156,13 +156,13 @@
 
 /* Phones: shrink the brand so the logo + wordmark never crowd the burger */
 @media (max-width: 480px) {
-  .navbar__inner { height: 68px; }
-  .navbar--scrolled .navbar__inner { height: 60px; }
-  .navbar__mark { height: 40px; }
-  .navbar--scrolled .navbar__mark { height: 38px; }
+  .navbar__inner { height: 74px; }
+  .navbar--scrolled .navbar__inner { height: 66px; }
+  .navbar__mark { height: 48px; }
+  .navbar--scrolled .navbar__mark { height: 44px; }
   .navbar__brand { gap: 10px; }
-  .navbar__wordmark { font-size: 1.16rem; }
-  .navbar__wordmark em { font-size: 0.52rem; letter-spacing: 0.26em; margin-top: 4px; }
+  .navbar__wordmark { font-size: 1.3rem; }
+  .navbar__wordmark em { font-size: 0.56rem; letter-spacing: 0.26em; margin-top: 4px; }
 }
 
 @media (max-width: 360px) {
