@@ -6,6 +6,14 @@
 /package.json
 /package-lock.json
 
+# logs
+*.log
+
+# never publish private spreadsheets / attendance exports
+*.xlsx
+*.xls
+*.csv
+
 # OS / filesystem cruft
 .DS_Store
 .smbdelete*
