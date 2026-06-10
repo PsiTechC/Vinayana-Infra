@@ -67,7 +67,7 @@
   transform: scale(1.08);
 }
 
-.why-card h4 {
+.why-card h3 {
   font-family: var(--font-body);
   font-size: 1.08rem;
   font-weight: 600;

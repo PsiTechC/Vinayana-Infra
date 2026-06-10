@@ -52,7 +52,7 @@ export default function Hero() {
             className={`hero__video ${i === active ? 'is-active' : ''}`}
             muted
             playsInline
-            preload="auto"
+            preload={i === active ? 'auto' : 'none'}
             autoPlay={i === 0}
             poster={`${src}.jpg`}
             onEnded={i === active ? next : undefined}
@@ -80,7 +80,7 @@ export default function Hero() {
           className="hero__eyebrow"
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.05 }}
         >
           Real Estate · Infrastructure · Development
         </motion.span>
@@ -89,7 +89,7 @@ export default function Hero() {
           className="hero__title"
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
         >
           Building Landmarks.
           <br />
@@ -100,7 +100,7 @@ export default function Hero() {
           className="hero__sub"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.55 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           Vinayana Infra Projects delivers modern real estate and infrastructure
           solutions with quality, trust, and innovation.
@@ -110,7 +110,7 @@ export default function Hero() {
           className="hero__actions"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.72 }}
+          transition={{ duration: 0.5, delay: 0.32 }}
         >
           <a href="#projects" className="btn btn-gold">
             Explore Projects

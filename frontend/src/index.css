@@ -11,9 +11,10 @@
   --navy-soft: #16395c;
   --gold: #c9a35b;
   --gold-soft: #e3c98c;
+  --gold-ink: #8a6a2e; /* darker gold for text on light backgrounds — meets WCAG AA */
   --grey-900: #1c2531;
   --grey-700: #44505f;
-  --grey-500: #6b7888;
+  --grey-500: #5b6573;
   --grey-300: #c5ccd6;
   --grey-100: #eef1f5;
   --off-white: #f7f8fa;
@@ -117,7 +118,7 @@ ul {
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
   margin-bottom: 18px;
 }
 

@@ -61,7 +61,7 @@
   transform: translateY(-3px);
 }
 
-.footer__col h4 {
+.footer__col h3 {
   font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 600;
@@ -71,7 +71,7 @@
   padding-bottom: 8px;
 }
 
-.footer__col h4::after {
+.footer__col h3::after {
   content: '';
   position: absolute;
   left: 0;

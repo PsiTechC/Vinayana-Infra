@@ -61,7 +61,7 @@ export default function WhyChooseUs() {
                 </svg>
               </div>
               <div>
-                <h4>{r.title}</h4>
+                <h3>{r.title}</h3>
                 <p>{r.text}</p>
               </div>
             </Reveal>

@@ -141,7 +141,7 @@
   .about__badge { animation: none; }
 }
 
-.about__pillar h4 {
+.about__pillar h3 {
   font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 600;

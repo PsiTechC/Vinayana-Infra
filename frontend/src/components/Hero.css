@@ -37,10 +37,11 @@
   bottom: 38px;
   z-index: 3;
   display: flex;
-  gap: 12px;
+  gap: 16px;
 }
 
 .hero__dot {
+  position: relative;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -49,6 +50,13 @@
   cursor: pointer;
   transition: background 0.35s var(--ease), transform 0.35s var(--ease),
     border-color 0.35s var(--ease);
+}
+
+/* Invisible 24×24 hit area so the dots are comfortably tappable */
+.hero__dot::after {
+  content: '';
+  position: absolute;
+  inset: -7px;
 }
 
 .hero__dot:hover { border-color: var(--gold); }

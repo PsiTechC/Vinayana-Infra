@@ -56,7 +56,7 @@ export default function About() {
               <Reveal key={p.title} className="about__pillar" delay={0.1 + i * 0.08}>
                 <span className="about__pillar-dot" />
                 <div>
-                  <h4>{p.title}</h4>
+                  <h3>{p.title}</h3>
                   <p>{p.text}</p>
                 </div>
               </Reveal>

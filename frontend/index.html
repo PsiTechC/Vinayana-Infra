@@ -34,13 +34,30 @@
     <meta name="twitter:description" content="Modern real estate and infrastructure solutions with quality, trust, and innovation." />
     <meta name="twitter:image" content="https://vinayanainfra.com/assets/logo.png" />
 
+    <!-- Preload the hero poster so the LCP image is discovered immediately -->
+    <link rel="preload" as="image" href="/assets/hero-1.jpg" fetchpriority="high" />
+
     <!-- Fonts: Playfair Display (elegant headings) + Inter (clean body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Load fonts without blocking first paint: swap media to 'all' once fetched -->
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap"
-      rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap"
+      />
+    </noscript>
   </head>
   <body>
     <div id="root"></div>

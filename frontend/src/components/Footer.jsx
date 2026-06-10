@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
 
         <div className="footer__col">
-          <h4>Quick Links</h4>
+          <h3>Quick Links</h3>
           <ul>
             {QUICK.map((q) => (
               <li key={q.href}><a href={q.href}>{q.label}</a></li>
@@ -57,7 +57,7 @@ export default function Footer() {
         </div>
 
         <div className="footer__col">
-          <h4>Our Services</h4>
+          <h3>Our Services</h3>
           <ul>
             {SERVICES.map((s) => (
               <li key={s}><a href="#services">{s}</a></li>
@@ -66,7 +66,7 @@ export default function Footer() {
         </div>
 
         <div className="footer__col">
-          <h4>Contact</h4>
+          <h3>Contact</h3>
           <ul className="footer__contact">
             <li>Vinayana Infra Projects Pvt Ltd,<br />401, 4th Floor, Sai Samarth Business Park,<br />Deonar, Chembur, Mumbai 400088</li>
             <li><a href="tel:+912235216910">+91 22 3521 6910</a></li>
