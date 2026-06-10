@@ -1,0 +1,16 @@
+Options -Indexes
+
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Redirect www → non-www
+RewriteCond %{HTTP_HOST} ^www\.vinayanainfra\.com [NC]
+RewriteRule ^(.*)$ https://vinayanainfra.com/$1 [R=301,L]
+
+# React SPA: route all requests through index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
