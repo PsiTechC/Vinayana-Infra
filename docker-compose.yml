@@ -29,7 +29,7 @@ services:
     depends_on:
       - backend
     ports:
-      - "80:80"         # change to "8080:80" if something else uses port 80
+      - "8099:80"       # host port 8099 → container 80; host nginx proxies the domain to it
 
 volumes:
   contacts-data:
