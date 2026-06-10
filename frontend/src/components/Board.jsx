@@ -108,7 +108,7 @@ const TEAM = [
       'With a strong focus on client collaboration, technical precision, and creative problem-solving, Ar. Limbachiya continues to shape distinctive environments that enhance the way people live, work, and interact.',
     ],
     domains: [],
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/chetanlimbachiya/',
   },
 ]
 
