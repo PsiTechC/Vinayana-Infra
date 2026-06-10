@@ -108,6 +108,19 @@
   letter-spacing: -0.02em;
 }
 
+.hero__title-brand {
+  display: block;
+  font-size: clamp(0.72rem, 1.1vw, 0.82rem);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  font-family: var(--font-sans);
+  margin-bottom: 0.55em;
+  -webkit-text-fill-color: var(--gold-soft);
+  background: none;
+}
+
 .hero__title-accent {
   background: linear-gradient(120deg, var(--gold-soft), var(--gold));
   -webkit-background-clip: text;

@@ -3,7 +3,7 @@ import './Footer.css'
 const QUICK = [
   { label: 'Home', href: '#home' },
   { label: 'About Us', href: '#about' },
-  { label: 'Projects', href: '#projects' },
+  { label: 'Services', href: '#services' },
   { label: 'Our Team', href: '#board' },
   { label: 'Our Mentors', href: '#mentors' },
   { label: 'Contact', href: '#contact' },
