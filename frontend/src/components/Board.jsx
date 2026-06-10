@@ -232,9 +232,6 @@ function PersonCard({ d, delay, onView, plain = false, ariaHidden = false }) {
             View Full Profile
           </button>
         )}
-        <a href={d.linkedin} className="director-card__social" aria-label={`${d.name} on LinkedIn`} target="_blank" rel="noopener noreferrer">
-          <SocialIcon />
-        </a>
       </div>
     </>
   )
@@ -501,9 +498,11 @@ export default function Board() {
                 <div className="director-modal__id">
                   <h3>{open.name}</h3>
                   <span className="director-card__role">{open.role}</span>
-                  <a href={open.linkedin} className="director-modal__linkedin" aria-label={`${open.name} on LinkedIn`} target="_blank" rel="noopener noreferrer">
-                    <SocialIcon /> Connect on LinkedIn
-                  </a>
+                  {open.linkedin !== '#' && (
+                    <a href={open.linkedin} className="director-modal__linkedin" aria-label={`${open.name} on LinkedIn`} target="_blank" rel="noopener noreferrer">
+                      <SocialIcon /> Connect on LinkedIn
+                    </a>
+                  )}
                 </div>
               </div>
 
