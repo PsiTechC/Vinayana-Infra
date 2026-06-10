@@ -5,10 +5,22 @@ import './Hero.css'
 // Background video carousel — clips crossfade one into the next.
 const VIDEOS = ['/assets/hero-1', '/assets/hero-2', '/assets/hero-3', '/assets/hero-4']
 
+// Phones get the static poster only — the carousel videos (1.6 MB+) never
+// load there, which is the single biggest mobile-LCP/Speed-Index win.
+const isMobileViewport = () =>
+  typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches
+
 export default function Hero() {
   // Soft parallax on the background driven by scroll
   const [offset, setOffset] = useState(0)
   const heroRef = useRef(null)
+
+  // Decide once on mount whether this is a phone (poster-only) or desktop (video).
+  const [useVideo, setUseVideo] = useState(() => !isMobileViewport())
+
+  // Hold video loading/playback until after the first paint so the hero text
+  // and poster settle first — avoids the big MP4 starving the critical path.
+  const [videoStarted, setVideoStarted] = useState(false)
 
   // Background video carousel state
   const [active, setActive] = useState(0)
@@ -24,11 +36,34 @@ export default function Hero() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Play only the active clip; reset + pause the others.
+  // Re-evaluate on resize/orientation change so a rotated tablet still behaves.
   useEffect(() => {
+    const mq = window.matchMedia('(max-width: 768px)')
+    const sync = () => setUseVideo(!mq.matches)
+    mq.addEventListener('change', sync)
+    return () => mq.removeEventListener('change', sync)
+  }, [])
+
+  // Kick off video loading only after the hero has had a chance to paint.
+  useEffect(() => {
+    if (!useVideo) return
+    const idle =
+      window.requestIdleCallback || ((cb) => window.setTimeout(cb, 200))
+    const id = idle(() => setVideoStarted(true))
+    return () => {
+      if (window.cancelIdleCallback) window.cancelIdleCallback(id)
+      else window.clearTimeout(id)
+    }
+  }, [useVideo])
+
+  // Play only the active clip; reset + pause the others. Gated on videoStarted.
+  // preload="none" means each clip only fetches once we load()+play() it.
+  useEffect(() => {
+    if (!useVideo || !videoStarted) return
     videoRefs.current.forEach((v, i) => {
       if (!v) return
       if (i === active) {
+        if (!v.currentSrc) v.load() // pick up the just-mounted <source>
         v.currentTime = 0
         const p = v.play()
         if (p && p.catch) p.catch(() => {})
@@ -36,7 +71,7 @@ export default function Hero() {
         v.pause()
       }
     })
-  }, [active])
+  }, [active, useVideo, videoStarted])
 
   return (
     <section className="hero" id="home" ref={heroRef}>
@@ -45,35 +80,46 @@ export default function Hero() {
         className="hero__bg"
         style={{ transform: `translateY(${offset * 0.35}px) scale(1.08)` }}
       >
-        {VIDEOS.map((src, i) => (
-          <video
-            key={src}
-            ref={(el) => (videoRefs.current[i] = el)}
-            className={`hero__video ${i === active ? 'is-active' : ''}`}
-            muted
-            playsInline
-            preload={i === active ? 'auto' : 'none'}
-            autoPlay={i === 0}
-            poster={`${src}.jpg`}
-            onEnded={i === active ? next : undefined}
-          >
-            <source src={`${src}.mp4`} type="video/mp4" />
-          </video>
-        ))}
+        {useVideo ? (
+          VIDEOS.map((src, i) => (
+            <video
+              key={src}
+              ref={(el) => (videoRefs.current[i] = el)}
+              className={`hero__video ${i === active ? 'is-active' : ''}`}
+              muted
+              playsInline
+              preload="none"
+              poster={`${src}.jpg`}
+              onEnded={i === active ? next : undefined}
+            >
+              {videoStarted && <source src={`${src}.mp4`} type="video/mp4" />}
+            </video>
+          ))
+        ) : (
+          /* Phones: static poster only — no video downloads on the critical path */
+          <img
+            className="hero__video is-active"
+            src="/assets/hero-1.jpg"
+            alt=""
+            fetchPriority="high"
+          />
+        )}
       </div>
       <div className="hero__overlay" />
 
-      {/* Carousel indicators */}
-      <div className="hero__dots">
-        {VIDEOS.map((src, i) => (
-          <button
-            key={src}
-            className={`hero__dot ${i === active ? 'is-active' : ''}`}
-            aria-label={`Show background clip ${i + 1}`}
-            onClick={() => setActive(i)}
-          />
-        ))}
-      </div>
+      {/* Carousel indicators — only meaningful when the video carousel runs */}
+      {useVideo && (
+        <div className="hero__dots">
+          {VIDEOS.map((src, i) => (
+            <button
+              key={src}
+              className={`hero__dot ${i === active ? 'is-active' : ''}`}
+              aria-label={`Show background clip ${i + 1}`}
+              onClick={() => setActive(i)}
+            />
+          ))}
+        </div>
+      )}
 
       <div className="container hero__content">
         <motion.span
