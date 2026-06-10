@@ -16,14 +16,14 @@ export default function About() {
           <Reveal className="about__media-main">
             <img
               src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80"
-              alt="Modern architecture by Vinayana Infra"
+              alt="Premium residential and commercial architecture by Vinayana Infra Projects"
               loading="lazy"
             />
           </Reveal>
           <Reveal className="about__media-sub" delay={0.15}>
             <img
               src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=700&q=80"
-              alt="Construction and infrastructure work"
+              alt="Quality construction and infrastructure development by Vinayana Infra"
               loading="lazy"
             />
           </Reveal>
