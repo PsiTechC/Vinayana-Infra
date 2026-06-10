@@ -92,8 +92,9 @@
     </noscript>
   </head>
   <body>
-    <div id="root">
-      <!-- Static pre-render: visible to search crawlers, replaced by React on load -->
+    <div id="root"></div>
+    <noscript>
+      <!-- SEO fallback: read by crawlers that don't execute JavaScript -->
       <header>
         <nav><a href="/">Vinayana Infra Projects</a></nav>
       </header>
@@ -147,7 +148,7 @@
           </address>
         </section>
       </main>
-    </div>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
